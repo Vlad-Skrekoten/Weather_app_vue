@@ -19,7 +19,7 @@ export default {
     },
 
     feelsTemp() {
-      return "Feels Temperature" + this.info.main.feels_like
+      return "Feels Temperature:" + this.info.main.feels_like
     },
 
     maxTemp() {
@@ -88,12 +88,10 @@ export default {
 }
 
 .wrapper {
-  max-width: 500px;
-  height: 500px;
   border-radius: 20px;
   background: #2f2b2b;
   margin: 0 5%;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
   color: #FFFF;
 }
@@ -105,7 +103,7 @@ export default {
 
 .wrapper input {
   letter-spacing: 1px;
-  margin:20px 0;
+  margin: 20px 0;
   background: transparent;
   border: 0;
   border-bottom: 2px solid #110813;
@@ -124,7 +122,6 @@ export default {
 .wrapper button {
   background: #e3bc4b;
   color: #FFFFFF;
-  padding: 10px 15px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -151,9 +148,7 @@ export default {
 
 
   .wrapper button {
-    padding: 0;
-    width: 80%;
-    height: 30px;
+    padding: 10px;
     font-size: 24px;
   }
 
@@ -165,4 +160,13 @@ export default {
     transform: scale(1.0);
   }
 }
+
+.block_inputs {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  gap: 2%;
+  align-items:center;
+}
+
 </style>
