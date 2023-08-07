@@ -69,7 +69,7 @@ export default {
     <div class="block_inputs">
       <input type="text" v-model="city" placeholder="Write your city">
       <button v-if="city != ''" @click="getWeather()">Find</button>
-      <button v-else-if="city == ''">Get weather</button>
+      <button v-else-if="city == ''">Get</button>
       <p class="error">{{ error }}</p>
     </div>
 
@@ -126,6 +126,7 @@ export default {
   border: none;
   cursor: pointer;
   transition: transform .3s ease;
+  padding: 10px 25px;
 }
 
 .wrapper button:hover {
