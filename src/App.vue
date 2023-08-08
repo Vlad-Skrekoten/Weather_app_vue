@@ -15,19 +15,19 @@ export default {
     },
 
     Temp() {
-      return "The Temperature: " + this.info.main.temp
+      return "The Temperature: " + Math.ceil(this.info.main.temp) + "°"
     },
 
     feelsTemp() {
-      return "Feels Temperature:" + this.info.main.feels_like
+      return "Feels Temperature: " + Math.ceil(this.info.main.feels_like) + "°"
     },
 
     maxTemp() {
-      return "Max Temperature: " + this.info.main.temp_max
+      return "Max Temperature: " + Math.ceil(this.info.main.temp_max) + "°"
     },
 
     minTemp() {
-      return "Max Temperature: " + this.info.main.temp_min
+      return "Min Temperature: " + Math.ceil(this.info.main.temp_min) + "°"
     }
 
 
@@ -67,9 +67,10 @@ export default {
     <div class="app">Weather app</div>
     <p> {{ city == "" ? "Write your city to know weather " : cityName }}</p>
     <div class="block_inputs">
-      <input type="text" v-model="city" placeholder="Write your city">
-      <button v-if="city != ''" @click="getWeather()">Find</button>
+      <input type="text" v-model="city" v-on:keypress.enter="getWeather()" placeholder="Write your city">
+      <button v-if="city != ''" v-on:click="getWeather">Find</button>
       <button v-else-if="city == ''">Get</button>
+
       <p class="error">{{ error }}</p>
     </div>
 
@@ -167,7 +168,6 @@ export default {
   grid-template-columns: 2fr 1fr;
   justify-content: center;
   gap: 2%;
-  align-items:center;
+  align-items: center;
 }
-
 </style>
