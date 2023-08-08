@@ -33,3 +33,9 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Photo-app
+
+<img src="https://github.com/Vlad-Skrekoten/Weather_app_vue/assets/88341932/57243bda-5eb0-427e-9545-c5f823e37791)">
+
+
